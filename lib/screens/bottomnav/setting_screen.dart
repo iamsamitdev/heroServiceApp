@@ -11,8 +11,20 @@ class _SettingScreenState extends State<SettingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('หน้า setting'),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Container(
+
+          ),
+          RaisedButton(
+            onPressed: (){
+              Navigator.pushReplacementNamed(context, '/lockscreen');
+            },
+            child: Text('ออกจากระบบ', style: TextStyle(color: Colors.white),),
+          )
+        ],
       ),
     );
   }
