@@ -18,7 +18,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: appTheme(),
-      initialRoute: '/dashboard',
+      initialRoute: '/welcome',
       routes: routes,
     );
   }
