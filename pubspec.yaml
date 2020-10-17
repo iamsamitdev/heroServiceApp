@@ -31,6 +31,7 @@ dependencies:
   intro_slider: ^2.3.3
   introduction_screen: ^1.0.9
   local_auth: ^0.6.3+2
+  http: ^0.12.2
 
 dev_dependencies:
   flutter_test:
