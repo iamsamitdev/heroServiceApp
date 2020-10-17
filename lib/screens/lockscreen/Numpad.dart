@@ -5,8 +5,8 @@ import 'package:local_auth/local_auth.dart'; // แสกนนิ้ว
 
 class Numpad extends StatefulWidget {
   final int length;
-  final Function onChange;
-  Numpad({Key key, this.length, this.onChange}) : super(key: key);
+  // final Function onChange;
+  Numpad({Key key, this.length}) : super(key: key);
 
   @override
   _NumpadState createState() => _NumpadState();
@@ -74,18 +74,30 @@ class _NumpadState extends State<Numpad> {
   }
 
   setValue(String val){
-    if(number.length < widget.length)
+
+    if(number.length  < widget.length){
       setState(() {
         number += val;
-        widget.onChange(number);
+        // widget.onChange(number);
       });
+    }
+
+    if(number.length == widget.length){
+      if(number == '123456'){
+        Navigator.pushReplacementNamed(context, '/dashboard');
+      }else{ 
+        number = '';
+      }
+    }
+    
+
   }
 
   backspace(String text){
     if(text.length > 0){
       setState(() {
         number = text.split('').sublist(0,text.length-1).join('');
-        widget.onChange(number);
+        // widget.onChange(number);
       });
     }
   }
