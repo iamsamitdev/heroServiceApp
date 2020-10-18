@@ -131,6 +131,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
         // เก็บค่าลงตัวแปรแบบ SharedPrefference
         sharedPreferences.setInt('appStep', 2);
+        sharedPreferences.setString('storeFullname', body['data']['prename'] + body['data']['firstname'] +' '+ body['data']['lastname']);
+        sharedPreferences.setString('storeAvatar', body['data']['avatar']);
 
         // ส่งไปหน้า dashboard
         Navigator.pushReplacementNamed(context, '/dashboard');
