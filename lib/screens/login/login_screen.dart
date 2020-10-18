@@ -129,13 +129,11 @@ class _LoginScreenState extends State<LoginScreen> {
         _showDialog('มีข้อผิดพลาด', 'ข้อมูลไม่ถูกต้อง ลองใหม่');
       }
 
-    } catch(e){
-      // throw Exception('มีข้อผิดพลาดการโหลดข้อมูล');
-      // print('มีข้อผิดพลาดการโหลดข้อมูล');
-        Fluttertoast.showToast(
+    }catch(e){
+      Fluttertoast.showToast(
           msg: "มีข้อผิดพลาดการโหลดข้อมูล",
-          toastLength: Toast.LENGTH_SHORT,
-          gravity: ToastGravity.CENTER,
+          toastLength: Toast.LENGTH_LONG,
+          gravity: ToastGravity.BOTTOM,
           timeInSecForIosWeb: 1,
           backgroundColor: Colors.red,
           textColor: Colors.white,

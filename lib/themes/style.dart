@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 ThemeData appTheme(){
   return ThemeData(
-    fontFamily: 'Montserrat',
-    primaryColor: Colors.blue,
-    accentColor: Colors.blueAccent,
-    buttonColor: Colors.lightBlue
+    fontFamily: 'Kanit',
+    primaryColor: Colors.teal,
+    accentColor: Colors.tealAccent,
+    buttonColor: Colors.lightBlueAccent
   );
 }

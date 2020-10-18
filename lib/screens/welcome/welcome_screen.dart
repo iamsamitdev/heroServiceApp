@@ -41,16 +41,16 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       key: introKey,
       pages: [
         PageViewModel(
-          title: "Fractional shares",
+          title: "เริ่มสร้างความมั่นคงทางการเงิน",
           body:
-              "Instead of having to buy an entire share, invest any amount you want.",
+              "บริการทางการเงินที่ตอบโจทย์ทุกวัยกับเราได้แล้ววันนี้",
           image: _buildImage('onboard1'),
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Learn as you go",
+          title: "เรียนรู้การให้เงินทำงาน",
           body:
-              "Download the Stockpile app and master the market with our mini-lesson.",
+              "ปล่อยให้เงินของคุณทำงานแทนคุณได้แล้ว",
           image: _buildImage('onboard2'),
           decoration: pageDecoration,
         ),
@@ -68,13 +68,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Title of last page",
+          title: "เริ่มทดลองใช้งานฟรี",
           bodyWidget: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              Text("Click on ", style: bodyStyle),
-              Icon(Icons.edit),
-              Text(" to edit a post", style: bodyStyle),
+              Text("เริ่มทดสอบระบบกับเราได้แล้ววันนี้", style: bodyStyle),
             ],
           ),
           image: _buildImage('onboard5'),

@@ -33,6 +33,7 @@ dependencies:
   local_auth: ^0.6.3+2
   http: ^0.12.2
   fluttertoast: ^7.1.1
+  curved_navigation_bar: ^0.3.4
 
 dev_dependencies:
   flutter_test:
@@ -76,6 +77,11 @@ flutter:
           weight: 500
         - asset: assets/fonts/Montserrat-Bold.ttf
           weight: 700
+    - family: Kanit
+      fonts:
+        - asset: assets/fonts/Kanit-Regular.ttf
+        - asset: assets/fonts/Kanit-Medium.ttf
+        - asset: assets/fonts/Kanit-Thin.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
