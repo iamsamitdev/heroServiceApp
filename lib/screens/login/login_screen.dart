@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:heroServiceApp/screens/components/passwordwidget.dart';
 import 'package:heroServiceApp/services/rest_api.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginScreen extends StatefulWidget {
   LoginScreen({Key key}) : super(key: key);
@@ -123,6 +124,14 @@ class _LoginScreenState extends State<LoginScreen> {
       
       // เช็คว่าถ้าลงทะเบียนสำเร็จ
       if(body['status']=='success' && body['data']['status']=='1'){
+        
+        // สร้าง Object แบบ Sharedprefference
+        SharedPreferences sharedPreferences = 
+        await SharedPreferences.getInstance();
+
+        // เก็บค่าลงตัวแปรแบบ SharedPrefference
+        sharedPreferences.setInt('appStep', 2);
+
         // ส่งไปหน้า dashboard
         Navigator.pushReplacementNamed(context, '/dashboard');
       }else{

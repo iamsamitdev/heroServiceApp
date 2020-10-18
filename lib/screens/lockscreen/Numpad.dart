@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:local_auth/local_auth.dart'; // แสกนนิ้ว
-// import 'package:shared_preferences/shared_preferences.dart'; 
+import 'package:local_auth/local_auth.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Numpad extends StatefulWidget {
   final int length;
@@ -65,15 +65,14 @@ class _NumpadState extends State<Numpad> {
   }
 
   void _setAuthSuccess() async {
-
     // สร้างตัวเก็บข้อมูลแบบ SharedPreferences
-    // SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-    // sharedPreferences.setInt('storeStep', 3);
+    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+    sharedPreferences.setInt('appStep', 2);
     Navigator.pushReplacementNamed(context, '/dashboard');
 
   }
 
-  setValue(String val){
+  setValue(String val) async {
 
     if(number.length  < widget.length){
       setState(() {
@@ -84,6 +83,8 @@ class _NumpadState extends State<Numpad> {
 
     if(number.length == widget.length){
       if(number == '123456'){
+        SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+        sharedPreferences.setInt('appStep', 2);
         Navigator.pushReplacementNamed(context, '/dashboard');
       }else{ 
         number = '';
