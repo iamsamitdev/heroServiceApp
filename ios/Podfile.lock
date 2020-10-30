@@ -1,0 +1,120 @@
+PODS:
+  - connectivity (0.0.1):
+    - Flutter
+    - Reachability
+  - Flutter (1.0.0)
+  - flutter_qr_bar_scanner (0.0.1):
+    - Flutter
+    - GoogleMobileVision/BarcodeDetector
+  - fluttertoast (0.0.2):
+    - Flutter
+    - Toast
+  - GoogleMobileVision/BarcodeDetector (1.6.0):
+    - GoogleMobileVision/Detector (~> 1.6)
+  - GoogleMobileVision/Detector (1.6.0):
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - GTMSessionFetcher/Core (~> 1.1)
+    - Protobuf (~> 3.1)
+  - GoogleToolboxForMac/Defines (2.2.2)
+  - GoogleToolboxForMac/Logger (2.2.2):
+    - GoogleToolboxForMac/Defines (= 2.2.2)
+  - "GoogleToolboxForMac/NSData+zlib (2.2.2)":
+    - GoogleToolboxForMac/Defines (= 2.2.2)
+  - GTMSessionFetcher/Core (1.4.0)
+  - image_picker_saver (0.0.1):
+    - Flutter
+  - local_auth (0.0.1):
+    - Flutter
+  - MTBBarcodeScanner (5.0.11)
+  - native_device_orientation (0.0.1):
+    - Flutter
+  - path_provider (0.0.1):
+    - Flutter
+  - Protobuf (3.13.0)
+  - qr_code_scanner (0.0.2):
+    - Flutter
+    - MTBBarcodeScanner
+  - qr_code_tools (0.0.1):
+    - Flutter
+  - Reachability (3.2)
+  - shared_preferences (0.0.1):
+    - Flutter
+  - Toast (4.0.0)
+  - url_launcher (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - connectivity (from `.symlinks/plugins/connectivity/ios`)
+  - Flutter (from `Flutter`)
+  - flutter_qr_bar_scanner (from `.symlinks/plugins/flutter_qr_bar_scanner/ios`)
+  - fluttertoast (from `.symlinks/plugins/fluttertoast/ios`)
+  - image_picker_saver (from `.symlinks/plugins/image_picker_saver/ios`)
+  - local_auth (from `.symlinks/plugins/local_auth/ios`)
+  - native_device_orientation (from `.symlinks/plugins/native_device_orientation/ios`)
+  - path_provider (from `.symlinks/plugins/path_provider/ios`)
+  - qr_code_scanner (from `.symlinks/plugins/qr_code_scanner/ios`)
+  - qr_code_tools (from `.symlinks/plugins/qr_code_tools/ios`)
+  - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
+  - url_launcher (from `.symlinks/plugins/url_launcher/ios`)
+
+SPEC REPOS:
+  trunk:
+    - GoogleMobileVision
+    - GoogleToolboxForMac
+    - GTMSessionFetcher
+    - MTBBarcodeScanner
+    - Protobuf
+    - Reachability
+    - Toast
+
+EXTERNAL SOURCES:
+  connectivity:
+    :path: ".symlinks/plugins/connectivity/ios"
+  Flutter:
+    :path: Flutter
+  flutter_qr_bar_scanner:
+    :path: ".symlinks/plugins/flutter_qr_bar_scanner/ios"
+  fluttertoast:
+    :path: ".symlinks/plugins/fluttertoast/ios"
+  image_picker_saver:
+    :path: ".symlinks/plugins/image_picker_saver/ios"
+  local_auth:
+    :path: ".symlinks/plugins/local_auth/ios"
+  native_device_orientation:
+    :path: ".symlinks/plugins/native_device_orientation/ios"
+  path_provider:
+    :path: ".symlinks/plugins/path_provider/ios"
+  qr_code_scanner:
+    :path: ".symlinks/plugins/qr_code_scanner/ios"
+  qr_code_tools:
+    :path: ".symlinks/plugins/qr_code_tools/ios"
+  shared_preferences:
+    :path: ".symlinks/plugins/shared_preferences/ios"
+  url_launcher:
+    :path: ".symlinks/plugins/url_launcher/ios"
+
+SPEC CHECKSUMS:
+  connectivity: c4130b2985d4ef6fd26f9702e886bd5260681467
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  flutter_qr_bar_scanner: 5c0324d036b4db9e5492dc876e6689dc7c38f203
+  fluttertoast: 6122fa75143e992b1d3470f61000f591a798cc58
+  GoogleMobileVision: 31cfb4319fd0c03d80105680abd9eae9da5e3b47
+  GoogleToolboxForMac: 800648f8b3127618c1b59c7f97684427630c5ea3
+  GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  image_picker_saver: 4f28bd70e1efdca68ad88beab0f11d22cffe04f6
+  local_auth: 25938960984c3a7f6e3253e3f8d962fdd16852bd
+  MTBBarcodeScanner: f453b33c4b7dfe545d8c6484ed744d55671788cb
+  native_device_orientation: e24d00be281de72996640885d80e706142707660
+  path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
+  Protobuf: 3dac39b34a08151c6d949560efe3f86134a3f748
+  qr_code_scanner: 16107718bdad7d708cdf6a5eacdca24b56cdf471
+  qr_code_tools: bd0c76036813e6251a1df7d130b9c366fe961444
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  url_launcher: 6fef411d543ceb26efce54b05a0a40bfd74cbbef
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.9.3
