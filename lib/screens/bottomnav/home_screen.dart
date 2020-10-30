@@ -33,30 +33,49 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-      itemCount: services.length,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        childAspectRatio: MediaQuery.of(context).size.width / (MediaQuery.of(context).size.height / 2.4)
-      ),
-      itemBuilder: (BuildContext context, int index){
-        return Card(
-          child: InkWell(
-              onTap: () {},
-              child: Column(
-              children: [
-                SizedBox(height: 20,),
-                Image.asset(images[index], height: 50, width: 50,),
-                Padding(
-                  padding: EdgeInsets.all(20),
-                  child: Text(services[index], style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),),
-                )
-              ],
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('บริการ'),
+          actions: [
+            FlatButton.icon(
+              onPressed: () {
+                Navigator.pushNamed(context, '/qrcode');
+              }, 
+              icon: Icon(Icons.center_focus_strong, color: Colors.white,), 
+              label: Text('สแกน', style: TextStyle(color: Colors.white),)
+            )
+          ],
+        ),
+        body: GridView.builder(
+        itemCount: services.length,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          childAspectRatio: MediaQuery.of(context).size.width / (MediaQuery.of(context).size.height / 2.4)
+        ),
+        itemBuilder: (BuildContext context, int index){
+          return Card(
+            child: InkWell(
+                onTap: () {},
+                child: Column(
+                children: [
+                  SizedBox(height: 20,),
+                  Image.asset(images[index], height: 50, width: 50,),
+                  Padding(
+                    padding: EdgeInsets.all(20),
+                    child: Text(services[index], style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),),
+                  )
+                ],
+              ),
             ),
-          ),
-        );
-      },
+          );
+        },
+      ),
     );
   }
 }

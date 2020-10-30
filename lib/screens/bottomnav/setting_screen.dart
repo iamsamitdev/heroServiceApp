@@ -68,7 +68,12 @@ class _SettingScreenState extends State<SettingScreen> {
   void initState() {
     super.initState();
     getProfile();
-    checkNetwork();
+    // checkNetwork();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
   }
 
   @override
@@ -78,7 +83,7 @@ class _SettingScreenState extends State<SettingScreen> {
         children: [
           Container(
             width: double.infinity,
-            height: 180.0,
+            height: 250.0,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/images/bg_account.jpg'),
@@ -88,7 +93,7 @@ class _SettingScreenState extends State<SettingScreen> {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 16.0),
+                  padding: const EdgeInsets.only(top: 35.0),
                   child: CircleAvatar(
                     radius: 50.0,
                     backgroundColor: Colors.white,
@@ -105,15 +110,29 @@ class _SettingScreenState extends State<SettingScreen> {
                    style: TextStyle(
                      fontSize: 24, 
                      color: Colors.white,
-                     shadows: [
-                       Shadow(
-                         offset: Offset(2.0, 2.0),
-                         blurRadius: 1.0,
-                         color: Colors.yellow
-                       )
-                     ]
+                    //  shadows: [
+                    //    Shadow(
+                    //      offset: Offset(2.0, 2.0),
+                    //      blurRadius: 1.0,
+                    //      color: Colors.yellow
+                    //    )
+                    //  ]
                     ),
                  ),
+                //  SizedBox(height: 10,),
+                //  RaisedButton(
+                //    onPressed: (){
+                //      Navigator.pushNamed(context, '/qrbarcode');
+                //    },
+                //    child: Row(
+                //      mainAxisSize: MainAxisSize.min,
+                //      children: [
+                //        Icon(Icons.picture_in_picture_alt, color: Colors.white,),
+                //        SizedBox(width: 10.0,),
+                //        Text('SCAN', style: TextStyle(color: Colors.white),),
+                //      ],
+                //    ),
+                //   )
               ],
             ),
           ),
@@ -142,7 +161,7 @@ class _SettingScreenState extends State<SettingScreen> {
             title: Text('ตั้งค่าใช้งาน'),
             onTap: (){},
           ),
-           ListTile(
+          ListTile(
             leading: Icon(Icons.exit_to_app),
             title: Text('ออกจากระบบ'),
             onTap: () async {

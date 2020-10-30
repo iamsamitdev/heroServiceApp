@@ -50,32 +50,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Center(child: Text('$_title')),
-      ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   onTap: onTabTapped,
-      //   currentIndex: _currentIndex,
-      //   backgroundColor: Colors.teal,
-      //   type: BottomNavigationBarType.fixed,
-      //   items: [
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.business_center, color: Colors.white,), 
-      //       title: Text('บริการ', style: TextStyle(color: Colors.white ),)
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.shopping_cart, color: Colors.white,), 
-      //       title: Text('ตลาด', style: TextStyle(color: Colors.white ),)
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.library_books, color: Colors.white,), 
-      //       title: Text('รายการจอง', style: TextStyle(color: Colors.white ),)
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.menu, color: Colors.white,), 
-      //       title: Text('อื่นๆ', style: TextStyle(color: Colors.white ),)
-      //     ),
-      //   ]
+      // appBar: AppBar(
+      //   title: Text('$_title'),
+      //   actions: [
+      //     FlatButton.icon(
+      //       onPressed: () => _openScanner(context), 
+      //       icon: Icon(Icons.center_focus_strong, color: Colors.white,), 
+      //       label: Text('Scan', style: TextStyle(color: Colors.white),)
+      //     )
+      //   ],
       // ),
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.white, /* สีพื้นหลัง */
@@ -99,4 +82,5 @@ class _DashboardScreenState extends State<DashboardScreen> {
       body: _children[_currentIndex],
     );
   }
+
 }
