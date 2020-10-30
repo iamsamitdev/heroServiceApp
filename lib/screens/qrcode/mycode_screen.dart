@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:typed_data';
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
@@ -16,7 +15,6 @@ class MyCodeScreen extends StatefulWidget {
 class _MyCodeScreenState extends State<MyCodeScreen> {
   @override
   Widget build(BuildContext context) {
-
     final message = 'https://www.itgenius.co.th/contact-us';
 
     final qrFutureBuilder = FutureBuilder(
@@ -75,5 +73,4 @@ class _MyCodeScreenState extends State<MyCodeScreen> {
     ui.decodeImageFromList(byteData.buffer.asUint8List(), completer.complete);
     return completer.future;
   }
-
 }

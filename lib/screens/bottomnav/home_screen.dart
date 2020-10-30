@@ -8,7 +8,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   // สร้างตัวแปรเก็บชื่อเมนู
   var services = [
     "Sofa Cleaning",
@@ -40,35 +39,50 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('บริการ'),
-          actions: [
-            FlatButton.icon(
+      appBar: AppBar(
+        title: Text('บริการ'),
+        actions: [
+          FlatButton.icon(
               onPressed: () {
                 Navigator.pushNamed(context, '/qrcode');
-              }, 
-              icon: Icon(Icons.center_focus_strong, color: Colors.white,), 
-              label: Text('สแกน', style: TextStyle(color: Colors.white),)
-            )
-          ],
-        ),
-        body: GridView.builder(
+              },
+              icon: Icon(
+                Icons.center_focus_strong,
+                color: Colors.white,
+              ),
+              label: Text(
+                'สแกน',
+                style: TextStyle(color: Colors.white),
+              ))
+        ],
+      ),
+      body: GridView.builder(
         itemCount: services.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          childAspectRatio: MediaQuery.of(context).size.width / (MediaQuery.of(context).size.height / 2.4)
-        ),
-        itemBuilder: (BuildContext context, int index){
+            crossAxisCount: 2,
+            childAspectRatio: MediaQuery.of(context).size.width /
+                (MediaQuery.of(context).size.height / 2.4)),
+        itemBuilder: (BuildContext context, int index) {
           return Card(
             child: InkWell(
-                onTap: () {},
-                child: Column(
+              onTap: () {},
+              child: Column(
                 children: [
-                  SizedBox(height: 20,),
-                  Image.asset(images[index], height: 50, width: 50,),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Image.asset(
+                    images[index],
+                    height: 50,
+                    width: 50,
+                  ),
                   Padding(
                     padding: EdgeInsets.all(20),
-                    child: Text(services[index], style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),),
+                    child: Text(
+                      services[index],
+                      style:
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+                    ),
                   )
                 ],
               ),
