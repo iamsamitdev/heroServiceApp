@@ -64,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 onTap: () {},
                 child: Column(
                 children: [
-                  SizedBox(height: 20,),
+                  SizedBox(height: 15,),
                   Image.asset(images[index], height: 50, width: 50,),
                   Padding(
                     padding: EdgeInsets.all(20),

@@ -79,6 +79,10 @@ class _SettingScreenState extends State<SettingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(0), // here the desired height
+        child: AppBar(),
+      ),
       body: ListView(
         children: [
           Container(
@@ -119,7 +123,7 @@ class _SettingScreenState extends State<SettingScreen> {
                     //  ]
                     ),
                  ),
-                //  SizedBox(height: 10,),
+                 SizedBox(height: 10,),
                 //  RaisedButton(
                 //    onPressed: (){
                 //      Navigator.pushNamed(context, '/qrbarcode');
@@ -133,13 +137,25 @@ class _SettingScreenState extends State<SettingScreen> {
                 //      ],
                 //    ),
                 //   )
+                RaisedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/qrscancheckin');
+                  },
+                  child: Text(
+                    "Scan Check In",
+                    style: TextStyle(color: Colors.white, fontSize: 16.0),
+                  ),
+                  shape: StadiumBorder(),
+                )
               ],
             ),
           ),
           ListTile(
             leading: Icon(Icons.person),
             title: Text('ข้อมูลผู้ใช้'),
-            onTap: (){},
+            onTap: (){
+              Navigator.pushNamed(context, '/profiledetail');
+            },
           ),
           ListTile(
             leading: Icon(Icons.lock),

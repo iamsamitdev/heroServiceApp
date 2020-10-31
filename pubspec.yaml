@@ -41,6 +41,8 @@ dependencies:
   path: ^1.7.0
   rxdart: ^0.22.5
   qr_flutter: ^3.2.0
+  url_launcher: ^5.7.0
+  xiaomi_scale: ^1.0.2
 
 dev_dependencies:
   flutter_test:
