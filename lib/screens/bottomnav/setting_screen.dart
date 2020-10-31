@@ -154,7 +154,8 @@ class _SettingScreenState extends State<SettingScreen> {
             leading: Icon(Icons.person),
             title: Text('ข้อมูลผู้ใช้'),
             onTap: (){
-              Navigator.pushNamed(context, '/profiledetail');
+              Navigator.pushNamed(context, '/userprofile');
+              // Navigator.pushNamed(context, '/profiledetail');
             },
           ),
           ListTile(

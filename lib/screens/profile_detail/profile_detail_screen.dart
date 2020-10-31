@@ -12,8 +12,8 @@ class ProfileDetailScreen extends StatefulWidget {
 class _ProfileDetailScreenState extends State<ProfileDetailScreen> {
 
   StreamSubscription _scanSubscription;
-  Map<String, MiScaleDevice> devices = {}; // <Id, MiScaleDevice>
-  final _scale = MiScale.instance;
+  // Map<String, MiScaleDevice> devices = {}; // <Id, MiScaleDevice>
+  // final _scale = MiScale.instance;
   
   @override
   Widget build(BuildContext context) {
