@@ -18,6 +18,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   // สร้างตัวแปรแบบ List ไว้เก็บรายการของ tab bottom
   int _currentIndex = 2;
   String _title='Hero Service';
+  Widget _actionWidget;
 
   final List<Widget> _children = [
     MarketScreen(),
@@ -27,56 +28,79 @@ class _DashboardScreenState extends State<DashboardScreen> {
     SettingScreen()
   ];
 
+  // สร้าง Widget action สำหรับไว้แยกแสดงผล Appbar
+  Widget _homeActionBar(){
+    return InkWell(
+      onTap: (){
+        Navigator.pushNamed(context, '/qrcode');
+      },
+      child: Padding(
+        padding: const EdgeInsets.only(right:15.0),
+        child: Row(
+          children: [
+            Icon(Icons.center_focus_strong),
+            Text(' SCAN')
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _marketActionBar(){
+    return InkWell(
+      onTap: (){},
+      child: Padding(
+        padding: const EdgeInsets.only(right:15.0),
+        child: Row(
+          children: [
+            Icon(Icons.add),
+            Text('Add news')
+          ],
+        ),
+      ),
+    );
+  }
+
   // สร้างฟังก์ชันเพื่อใช้ในการเปลี่ยนหน้า
   void onTabTapped(int index){
     setState(() {
       _currentIndex = index;
       // เปลี่ยน title ไปตาม tab ที่เลือก
       switch (index) {
-        case 0: _title = 'ตลาด';          
+        case 0: _title = 'ตลาด'; 
+        _actionWidget = _marketActionBar();         
           break;
-        case 1: _title = 'รายการจอง';          
+        case 1: _title = 'รายการจอง';
+        _actionWidget = Container();       
           break;
-        case 2: _title = 'บริการ';          
+        case 2: _title = 'หน้าหลัก'; 
+        _actionWidget = _homeActionBar();         
           break;
-        case 3: _title = 'แจ้งเตือน';          
+        case 3: _title = 'แจ้งเตือน';   
+        _actionWidget = Container();       
           break;
-        case 4: _title = 'อื่นๆ';          
+        case 4: _title = 'อื่นๆ'; 
+        _actionWidget = Container();         
           break;
       }
     });
   }
 
   @override
+  void initState() {
+    super.initState();
+    _actionWidget = _homeActionBar();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text('$_title')),
+        title: Text('$_title'),
+        actions: [
+          _actionWidget
+        ],
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   onTap: onTabTapped,
-      //   currentIndex: _currentIndex,
-      //   backgroundColor: Colors.teal,
-      //   type: BottomNavigationBarType.fixed,
-      //   items: [
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.business_center, color: Colors.white,), 
-      //       title: Text('บริการ', style: TextStyle(color: Colors.white ),)
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.shopping_cart, color: Colors.white,), 
-      //       title: Text('ตลาด', style: TextStyle(color: Colors.white ),)
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.library_books, color: Colors.white,), 
-      //       title: Text('รายการจอง', style: TextStyle(color: Colors.white ),)
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.menu, color: Colors.white,), 
-      //       title: Text('อื่นๆ', style: TextStyle(color: Colors.white ),)
-      //     ),
-      //   ]
-      // ),
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.white, /* สีพื้นหลัง */
         color: Colors.teal, /* สีพื้นเมนู */
