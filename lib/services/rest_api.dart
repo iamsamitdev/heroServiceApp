@@ -36,8 +36,21 @@ class CallAPI {
     }
   }
 
-  // Read News
-  Future<List<NewsModel>> getNews() async {
+  // Read Last News
+  Future<List<NewsModel>> getLastNews() async {
+    final response = await http.get(
+      baseAPIURL+'lastnews',
+      headers: _setHeaders()
+    );
+    if(response.body != null){
+      return newsModelFromJson(response.body);
+    }else{
+      return null;
+    }
+  }
+
+  // Read All News
+  Future<List<NewsModel>> getAllNews() async {
     final response = await http.get(
       baseAPIURL+'news',
       headers: _setHeaders()
