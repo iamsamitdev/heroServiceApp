@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:heroServiceApp/models/LoginModel.dart';
+import 'package:heroServiceApp/models/NewsDetailModel.dart';
 import 'package:heroServiceApp/models/NewsModel.dart';
 import 'package:http/http.dart' as http;
 
@@ -36,14 +37,40 @@ class CallAPI {
     }
   }
 
-  // Read News
-  Future<List<NewsModel>> getNews() async {
+  // Read Lastest News
+  Future<List<NewsModel>> getLastNews() async {
+    final response = await http.get(
+      baseAPIURL+'lastnews',
+      headers: _setHeaders()
+    );
+    if(response.body != null){
+      return newsModelFromJson(response.body);
+    }else{
+      return null;
+    }
+  }
+
+  // Read All News
+  Future<List<NewsModel>> getAllNews() async {
     final response = await http.get(
       baseAPIURL+'news',
       headers: _setHeaders()
     );
     if(response.body != null){
       return newsModelFromJson(response.body);
+    }else{
+      return null;
+    }
+  }
+
+  // Read News By ID
+  Future<NewsDetailModel> getNewsByID(id) async {
+    final response = await http.get(
+      baseAPIURL+'news/'+id,
+      headers: _setHeaders()
+    );
+    if(response.body != null){
+      return newsDetailModelFromJson(response.body);
     }else{
       return null;
     }
