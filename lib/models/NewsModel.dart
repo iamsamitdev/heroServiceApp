@@ -10,6 +10,7 @@ class NewsModel {
         this.topic,
         this.detail,
         this.imageurl,
+        this.linkurl,
         this.createdAt,
         this.status,
     });
@@ -18,6 +19,7 @@ class NewsModel {
     String topic;
     String detail;
     String imageurl;
+    String linkurl;
     DateTime createdAt;
     String status;
 
@@ -26,6 +28,7 @@ class NewsModel {
         topic: json["topic"] == null ? null : json["topic"],
         detail: json["detail"] == null ? null : json["detail"],
         imageurl: json["imageurl"] == null ? null : json["imageurl"],
+        linkurl: json["linkurl"] == null ? null : json["linkurl"],
         createdAt: json["created_at"] == null ? null : DateTime.parse(json["created_at"]),
         status: json["status"] == null ? null : json["status"],
     );
@@ -35,6 +38,7 @@ class NewsModel {
         "topic": topic == null ? null : topic,
         "detail": detail == null ? null : detail,
         "imageurl": imageurl == null ? null : imageurl,
+        "linkurl": linkurl == null ? null : linkurl,
         "created_at": createdAt == null ? null : createdAt.toIso8601String(),
         "status": status == null ? null : status,
     };

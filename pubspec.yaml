@@ -36,6 +36,7 @@ dependencies:
   curved_navigation_bar: ^0.3.4
   shared_preferences: ^0.5.12+2
   connectivity: ^0.4.9+5
+  url_launcher: ^5.7.0
 
 dev_dependencies:
   flutter_test:
