@@ -43,6 +43,13 @@ dependencies:
   path: ^1.7.0
   rxdart: ^0.22.5
   qr_code_tools: ^0.0.6
+  qr_flutter: ^3.2.0
+  flutter_launcher_icons: ^0.8.1
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/icon.png"
 
 dev_dependencies:
   flutter_test:
